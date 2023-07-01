@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".CampSoportetecnicoFragment">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/fondo_fin"
+        android:scaleY="1.1">
+    </ImageView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="300dp"
+                    android:layout_height="450dp"
+                    app:cardCornerRadius="20dp"
+                    android:layout_margin="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="SOPORTE TECNICO"
+                            android:textStyle="bold"
+                            android:textColor="@color/green"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:layout_marginTop="30dp"
+                            android:textSize="15dp">
+
+                        </TextView>
+
+                        <TextView
+                            android:layout_width="260dp"
+                            android:layout_height="wrap_content"
+                            android:text="Por favor a conrinuación escriba en que podemos ayudar(dificultades con el app, fallas, reclamos, etc.)"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:textAlignment="center"
+                            android:layout_marginTop="12dp">
+
+                        </TextView>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="230dp"
+                            android:layout_height="250dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/blancofond"
+                            android:layout_marginLeft="40dp">
+
+                            <TextView
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:text="Escriba aqui.."
+                                android:layout_gravity="center"
+                                android:layout_marginTop="12dp">
+
+                            </TextView>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cancelar"
+                android:layout_marginTop="570dp"
+                android:layout_marginLeft="120dp">
+
+            </ImageView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/comprobado"
+                android:layout_marginLeft="220dp"
+                android:layout_marginTop="570dp">
+
+            </ImageView>
+
+        </LinearLayout>
+    </FrameLayout>
+</FrameLayout>

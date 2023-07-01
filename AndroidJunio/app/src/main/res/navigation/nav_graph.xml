@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+
+    app:startDestination="@id/inicioRolFragment">
+
+
+    <activity
+        android:id="@+id/homeActivity"
+        android:name="com.example.agroexpress.HomeActivity"
+        android:label="activity_home"
+        tools:layout="@layout/activity_home">
+    </activity>
+    <fragment
+        android:id="@+id/registrarFragment"
+        android:name="com.example.agroexpress.RegistrarFragment"
+        android:label="fragment_registrar"
+        tools:layout="@layout/fragment_registrar" />
+    <fragment
+        android:id="@+id/inicioRolFragment"
+        android:name="com.example.agroexpress.InicioRolFragment"
+        android:label="InicioRolFragment"
+        tools:layout="@layout/activity_inicio_roles">
+        <action
+            android:id="@+id/action_inicioRolFragment_to_masOpcionesFragment"
+            app:destination="@id/masOpcionesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/masOpcionesFragment"
+        android:name="com.example.agroexpress.MasOpcionesFragment"
+        android:label="fragment_mas_opciones"
+        tools:layout="@layout/fragment_mas_opciones" >
+        <action
+            android:id="@+id/action_masOpcionesFragment_to_perfilFragment"
+            app:destination="@id/perfilFragment" />
+        <action
+            android:id="@+id/action_masOpcionesFragment_to_produc_RecyclerFragment"
+            app:destination="@id/produc_RecyclerFragment" />
+        <action
+            android:id="@+id/action_masOpcionesFragment_to_camp_RecyclerFragment"
+            app:destination="@id/camp_RecyclerFragment" />
+        <action
+            android:id="@+id/action_masOpcionesFragment_to_despachos_RecyclerFragment"
+            app:destination="@id/despachos_RecyclerFragment" />
+        <action
+            android:id="@+id/action_masOpcionesFragment_to_devolucion_recyclerFragment"
+            app:destination="@id/devolucion_recyclerFragment" />
+        <action
+            android:id="@+id/action_masOpcionesFragment_to_entrega_RecyclerFragment"
+            app:destination="@id/entrega_RecyclerFragment" />
+        <action
+            android:id="@+id/action_masOpcionesFragment_to_pedidos_RecyclerFragment"
+            app:destination="@id/pedidos_RecyclerFragment" />
+        <action
+            android:id="@+id/action_masOpcionesFragment_to_transp_RecyclerFragment"
+            app:destination="@id/transp_RecyclerFragment" />
+        <action
+            android:id="@+id/action_masOpcionesFragment_to_soporte_RecyclerFragment"
+            app:destination="@id/soporte_RecyclerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/perfilFragment"
+        android:name="com.example.agroexpress.PerfilFragment"
+        android:label="fragment_perfil"
+        tools:layout="@layout/fragment_perfil" />
+    <activity
+        android:id="@+id/configuracionActivity"
+        android:name="com.example.agroexpress.ConfiguracionActivity"
+        android:label="ConfiguracionActivity" />
+
+    <fragment
+        android:id="@+id/camEditarproductoFragment"
+        android:name="com.example.agroexpress.CamEditarproductoFragment"
+        android:label="fragment_cam_editarproducto"
+        tools:layout="@layout/fragment_cam_editarproducto" />
+
+    <fragment
+        android:id="@+id/produc_RecyclerFragment"
+        android:name="com.example.agroexpress.Produc_RecyclerFragment"
+        android:label="fragment_produc__recycler"
+        tools:layout="@layout/fragment_produc__recycler" >
+        <action
+            android:id="@+id/action_produc_RecyclerFragment_to_camEditarproductoFragment"
+            app:destination="@id/camEditarproductoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/camp_RecyclerFragment"
+        android:name="com.example.agroexpress.Camp_RecyclerFragment"
+        android:label="fragment_camp__recycler"
+        tools:layout="@layout/fragment_camp__recycler" />
+    <fragment
+        android:id="@+id/despachos_RecyclerFragment"
+        android:name="com.example.agroexpress.Despachos_RecyclerFragment"
+        android:label="fragment_despachos__recycler"
+        tools:layout="@layout/fragment_despachos__recycler" />
+    <fragment
+        android:id="@+id/devolucion_recyclerFragment"
+        android:name="com.example.agroexpress.Devolucion_recyclerFragment"
+        android:label="fragment_devolucion_recycler"
+        tools:layout="@layout/fragment_devolucion_recycler" />
+    <fragment
+        android:id="@+id/entrega_RecyclerFragment"
+        android:name="com.example.agroexpress.Entrega_RecyclerFragment"
+        android:label="fragment_entrega__recycler"
+        tools:layout="@layout/fragment_entrega__recycler" />
+    <fragment
+        android:id="@+id/pedidos_RecyclerFragment"
+        android:name="com.example.agroexpress.Pedidos_RecyclerFragment"
+        android:label="fragment_pedidos__recycler"
+        tools:layout="@layout/fragment_pedidos__recycler" />
+    <fragment
+        android:id="@+id/transp_RecyclerFragment"
+        android:name="com.example.agroexpress.Transp_RecyclerFragment"
+        android:label="fragment_transp__recycler"
+        tools:layout="@layout/fragment_transp__recycler" />
+    <fragment
+        android:id="@+id/soporte_RecyclerFragment"
+        android:name="com.example.agroexpress.Soporte_RecyclerFragment"
+        android:label="fragment_soporte__recycler"
+        tools:layout="@layout/fragment_soporte__recycler" />
+    <fragment
+        android:id="@+id/iniciarSesionFragment"
+        android:name="com.example.agroexpress.IniciarSesionFragment"
+        android:label="fragment_iniciar_sesion"
+        tools:layout="@layout/fragment_iniciar_sesion" />
+    <activity
+        android:id="@+id/registrarActivity"
+        android:name="com.example.agroexpress.RegistrarActivity"
+        android:label="activity_registrar"
+        tools:layout="@layout/activity_registrar" />
+    <activity
+        android:id="@+id/iniciar_SesionActivity"
+        android:name="com.example.agroexpress.Iniciar_SesionActivity"
+        android:label="activity_iniciar_sesion"
+        tools:layout="@layout/activity_iniciar_sesion" />
+</navigation>

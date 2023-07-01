@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Produc_RecyclerFragment">
+
+    <LinearLayout
+        android:id="@+id/linerproducto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerproducto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeproducto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:background="@color/black"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progressproducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:elevation="15dp"
+        android:backgroundTint="@color/black"
+        android:alpha="0.8">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <SearchView
+                android:id="@+id/searchview"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:queryHint="PRODUCTOS"
+                android:layout_marginLeft="40dp"
+                android:iconifiedByDefault="false"
+                android:background="@drawable/borde_search"
+                android:layout_marginTop="5dp"/>
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="5dp"
+                android:background="@color/transparente"
+                android:src="@drawable/ic_baseline_filter_alt_24" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/canasta"
+            android:layout_marginTop="660dp"
+            android:layout_marginHorizontal="340dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/gravityBtnagregarProduc"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:backgroundTint="@color/white"
+        android:src="@drawable/mas"
+        android:layout_marginTop="550dp"
+        android:layout_marginHorizontal="340dp">
+
+
+
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+
+</FrameLayout>

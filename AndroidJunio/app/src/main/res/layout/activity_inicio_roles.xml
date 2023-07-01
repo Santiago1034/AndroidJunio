@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/fondo_fin"
+    android:layout_marginTop="50dp"
+    android:onClick="reproducir"
+    android:orientation="vertical"
+    tools:context=".Activity_Inicio_Roles">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <org.imaginativeworld.whynotimagecarousel.ImageCarousel
+                    android:id="@+id/carousel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="230dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="60dp"
+                        android:background="@drawable/shape_carousel"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView1"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="20dp"
+                                app:srcCompat="@drawable/agricultor"
+                                />
+
+                            <TextView
+                                android:id="@+id/descrip1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginRight="40dp"
+                                android:text="¿Quieres trabajar con nosotros?,llena el siguiente formulario:"
+                                android:fontFamily="@font/texto1"
+                                android:textSize="15sp"
+                                android:textAlignment="center"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/link1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="10dp"
+                                android:text="link"
+                                android:textSize="14sp"
+                                android:textAlignment="center"
+                                android:textColor="@color/green"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="60dp"
+                        android:background="@drawable/shape_carousel"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="20dp"
+                                app:srcCompat="@drawable/mercado"
+                                />
+
+                            <TextView
+                                android:id="@+id/descrip2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginRight="40dp"
+                                android:text="Encuentra los mejores productos frescos y saludables"
+                                android:textAlignment="center"
+                                android:textSize="15sp"
+                                android:fontFamily="@font/texto1"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                    <androidx.coordinatorlayout.widget.CoordinatorLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="60dp"
+                        android:background="@drawable/shape_carousel"
+                        android:elevation="10dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginTop="20dp"
+                                app:srcCompat="@drawable/descuento"
+                                />
+
+                            <TextView
+                                android:id="@+id/descrip3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="20dp"
+                                android:layout_marginLeft="40dp"
+                                android:layout_marginRight="40dp"
+                                android:text="Descubre todas nuestras promociones y descuentos"
+                                android:textSize="15sp"
+                                android:textAlignment="center"
+                                android:fontFamily="@font/texto1"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </FrameLayout>
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

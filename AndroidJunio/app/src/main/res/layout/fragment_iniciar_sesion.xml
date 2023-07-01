@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IniciarSesionFragment"
+    android:background="@drawable/fondo_fin">
+
+        <LinearLayout
+            android:layout_width="300dp"
+            android:layout_height="500dp"
+            android:layout_gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_inicio"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/usuario" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="DOCUMENTO *"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <EditText
+                    android:id="@+id/ingresoDocumento"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:background="@color/blanco_gris"
+                    android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:hint="@string/Email"
+                    android:inputType="textPersonName"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="CONTRASEÑA *"
+                    android:textColor="@color/green"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp"
+                    />
+
+                <EditText
+                    android:id="@+id/ingresoContraseña"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:hint="@string/Password"
+                    android:paddingLeft="10dp"
+                    android:background="@color/blanco_gris"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="60dp"
+                    android:text="INICIAR SESION"
+                    android:background="@drawable/botones2shape"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="15dp"
+                    android:textColor="@color/white"
+                    android:padding="20dp"
+                    >
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_width="144dp"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/link_home"
+                    android:text="@string/textButton2"
+                    android:textColor="@color/black"
+                    android:textSize="10dp"
+                    android:textStyle="">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+</FrameLayout>

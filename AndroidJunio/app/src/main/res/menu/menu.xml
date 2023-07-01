@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/inicioRolFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="INICIO"
+        >
+    </item>
+    <item
+        android:id="@+id/masOpcionesFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_option_24"
+        android:title="MAS OPCIONES"
+        >
+    </item>
+    <item
+        android:id="@+id/perfilFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_baseline_account_circle_24"
+        android:title="PERFIL"
+        >
+    </item>
+</menu>
