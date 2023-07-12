@@ -9,9 +9,11 @@ import android.widget.EditText
 import android.widget.Toast
 import com.android.volley.Request
 import com.android.volley.Response
+import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.google.android.material.internal.ContextUtils.getActivity
+import org.json.JSONObject
 
 
 class Iniciar_SesionActivity : AppCompatActivity() {
@@ -20,7 +22,7 @@ class Iniciar_SesionActivity : AppCompatActivity() {
         private lateinit var ejemplo : String
     }
     private lateinit var textDocumento : EditText
-    private lateinit var textContraseña : EditText
+    private lateinit var textContrasena : EditText
     private lateinit var btnIngresar : Button
 
 
@@ -32,54 +34,49 @@ class Iniciar_SesionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_iniciar_sesion)
 
 
-
-        val bntRegistar: Button = findViewById(R.id.btnTextoRegistrar)
-        bntRegistar.setOnClickListener{
-           val intent: Intent = Intent(this,RegistrarActivity :: class.java)
-            startActivity(intent)
-        }
-
-            this.textDocumento = findViewById(R.id.ingresoDocumento)
-            this.textContraseña = findViewById(R.id.ingresoContraseña)
-            this.btnIngresar = findViewById(R.id.btnIniciarSecion)
-        ejemplo = textDocumento.text.toString()
-
-
-
+        textDocumento =findViewById(R.id.ingresoDocumento)
+        textContrasena =findViewById(R.id.ingresoContrasena)
+        btnIngresar=findViewById(R.id.btnIniciarSecion)
 
         btnIngresar.setOnClickListener {
-            val url = "http://192.168.88.149:8080/Ingresar/textDocumento/textContraseña"
-            val queue = Volley.newRequestQueue(this)
-            val resultPost = object : StringRequest(Request.Method.GET,url,
-                Response.Listener< String>{ response ->
-                    Toast.makeText(this,"Ingreso Exitoso", Toast.LENGTH_LONG).show()
-                }, Response.ErrorListener{ error->
-                    Toast.makeText(this," $error", Toast.LENGTH_LONG).show()
+            val username = textDocumento.text.toString()
+            val password = textContrasena.text.toString()
+
+            val url =  "http://192.168.18.149:8080/Ingresar/"
+            val params = JSONObject()
+            params.put("documento", username)
+            params.put("contraseña", password)
+
+
+            Log.e("pas",params.toString())
+
+            val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url,params,
+                Response.Listener { response ->
+
+                    val status = response.getString("status")
+                    Log.e("usu",status.toString())
+                    val message = response.getString("message")
+
+                    Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+
+
+                    if (status == "success") {
+                        val intent2 = Intent(this,PruebaNavActivity::class.java).apply {  }
+                        startActivity(intent2)
+                    }
+                },
+                Response.ErrorListener { error ->
+                    Toast.makeText(this, "Error de conexión", Toast.LENGTH_SHORT).show()
                 }
-            ){
+            )
 
-
-
-                override fun getParams(): MutableMap<String, String>? {
-                    val parametros = HashMap<String,String>()
-
-
-                    parametros.put("usu_Documento",textDocumento?.text.toString())
-                    parametros.put("usu_Contrasena",textContraseña?.text.toString())
-
-
-
-                    return parametros
-
-                }
-
-            }
-            val intent2 = Intent(this,PruebaNavActivity::class.java).apply {  }
-            startActivity(intent2)
-            queue.add(resultPost)
-        }
+            // Agregar la solicitud a la cola de solicitudes de Volley
+            Volley.newRequestQueue(this).add(jsonObjectRequest)
         }
     }
+}
+
+
 
 
 

@@ -9,11 +9,11 @@ import android.widget.Spinner
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.findNavController
-import com.example.agroexpress.Iniciar_SesionActivity.Companion.ejemplo
+
 
 class HomeActivity : AppCompatActivity() {
 
-    val ejemplo2 = ejemplo
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         val screenSplash = installSplashScreen()
