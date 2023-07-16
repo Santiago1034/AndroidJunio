@@ -58,7 +58,7 @@ class Devolucion_recyclerFragment : Fragment(), DevolucionListener {
         savedInstanceState: Bundle?
     ): View? {
         val ll = inflater.inflate(R.layout.fragment_devolucion_recycler, container, false)
-        val url= "http://192.168.22.36/DatosBdAgro/Devoluciones.php"
+        val url= "http://192.168.104.149:8080/ListarOrdenesCompra"
         val queue= Volley.newRequestQueue(this.context)
         Log.d("devo fragment", "error")
         val stringRequest = StringRequest(Request.Method.GET,url,{ response ->

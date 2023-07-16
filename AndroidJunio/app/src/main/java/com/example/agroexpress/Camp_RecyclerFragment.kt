@@ -61,7 +61,7 @@ class Camp_RecyclerFragment : Fragment(), UsuarioListener {
     ): View? {
         // Inflate the layout for this fragment
         val ll = inflater.inflate(R.layout.fragment_camp__recycler, container, false)
-        val url= "http://192.168.22.36/DatosBdAgro/campesino.php"
+        vval url= "http://192.168.104.149:8080/ListarCampesinos"
         val queue= Volley.newRequestQueue(this.context)
         Log.d("camp fragment", "error")
         val stringRequest = StringRequest(Request.Method.GET,url,{ response ->

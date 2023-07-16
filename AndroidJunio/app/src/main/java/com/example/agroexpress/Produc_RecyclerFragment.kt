@@ -62,13 +62,8 @@ class Produc_RecyclerFragment : Fragment(),ItemListener {
         val ll = inflater.inflate(R.layout.fragment_produc__recycler, container, false)
 
         this.floatingBtn = ll.findViewById(R.id.gravityBtnagregarProduc)
-        val url= "http://192.168.88.149:8080/Listarproductos"
-
-
-        /*val url= "http://localhost/DatosBdAgro/bdagro.php"*/
-
-
-
+        val url= "http://192.168.104.149:8080/Listarproductos"
+        val url2 = "http://192.168.104.149:8080/ListarProductosCampesino/{documento}"
         val queue= Volley.newRequestQueue(this.context)
         Log.d("product fragment", "error")
         val stringRequest = StringRequest(Request.Method.GET,url,{response ->

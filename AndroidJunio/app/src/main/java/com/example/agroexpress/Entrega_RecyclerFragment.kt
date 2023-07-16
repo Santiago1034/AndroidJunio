@@ -58,7 +58,7 @@ class Entrega_RecyclerFragment : Fragment(), EntregaListener {
         savedInstanceState: Bundle?
     ): View? {
         val ll = inflater.inflate(R.layout.fragment_entrega__recycler, container, false)
-        val url= "http://192.168.22.36/DatosBdAgro/entrega.php"
+        val url= "http://192.168.88.149:8080"
         val queue= Volley.newRequestQueue(this.context)
         Log.d("camp fragment", "error")
         val stringRequest = StringRequest(Request.Method.GET,url,{ response ->
