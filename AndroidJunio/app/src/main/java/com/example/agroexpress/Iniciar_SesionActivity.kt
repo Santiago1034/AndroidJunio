@@ -42,39 +42,37 @@ class Iniciar_SesionActivity : AppCompatActivity() {
             val username = textDocumento.text.toString()
             val password = textContrasena.text.toString()
 
-            val url =  "http://192.168.18.149:8080/Ingresar/"
+            val url = "http://192.168.1.67:8080/Ingresar"
+
             val params = JSONObject()
             params.put("documento", username)
             params.put("contraseña", password)
 
-
-            Log.e("pas",params.toString())
-
-            val jsonObjectRequest = JsonObjectRequest(Request.Method.GET, url,params,
+            val jsonRequest = JsonObjectRequest(Request.Method.POST, url, params,
                 Response.Listener { response ->
 
-                    val status = response.getString("status")
-                    Log.e("usu",status.toString())
+                    // Resto del código para manejar la respuesta JSON válida
                     val message = response.getString("message")
-
                     Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
 
-
-                    if (status == "success") {
-                        val intent2 = Intent(this,PruebaNavActivity::class.java).apply {  }
-                        startActivity(intent2)
+                    if (message == "Login Exitoso") {
+                        val intent = Intent(this, PruebaNavActivity::class.java)
+                        startActivity(intent)
                     }
                 },
                 Response.ErrorListener { error ->
-                    Toast.makeText(this, "Error de conexión", Toast.LENGTH_SHORT).show()
-                }
-            )
+
+                    Log.e("error", "$error")
+                    Toast.makeText(this, "$error", Toast.LENGTH_SHORT).show()
+
+                })
 
             // Agregar la solicitud a la cola de solicitudes de Volley
-            Volley.newRequestQueue(this).add(jsonObjectRequest)
+            Volley.newRequestQueue(this@Iniciar_SesionActivity).add(jsonRequest)
+        }
         }
     }
-}
+
 
 
 
